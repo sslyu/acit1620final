@@ -1,0 +1,115 @@
+<!-- Simon Lyu A01240539 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallery Home</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 640px) {
+    p.normal {width: 640px
+    }
+    p.active {width: 80%
+    }
+}
+
+/* label, input, button{ */
+    /* display:none; */
+
+
+</style>
+</head>
+
+<body>
+
+    <script >
+        $("label").click(function() {
+            $("label").show();
+        })
+
+        $("input").click(function() {
+            $("input").show();
+        })
+
+        $("button").click(function() {
+            $("button").show();
+        })
+    </script>
+
+    <section> <!-- Semantic tag -->
+        <h1>Welcome to our gallery</h1>
+        <p>Hover on any thumbnail to see it bigger</p>
+    </section>
+
+    <div id="thumb-bar"> 
+        <img src="images/pic1B.jpg" alt="thumb eye pic" width="125" height="100">
+        <img src="images/pic2B.jpg" alt="thumb pic" width="125" height="100">
+        <img src="images/pic3B.jpg" alt="thumb flower pic" width="125" height="100">
+        <img src="images/pic4B.jpg" alt="thumb egyptian relief pic" width="125" height="100">
+        <img src="images/pic5B.jpg" alt="thumb buttlerfly pic" width="125" height="100">
+        
+        <script>
+            function functieArray() {
+                var gallery = document.getElementById("thumb-bar");
+                for (i = 0; i < imgArray.length; i++) {
+                    gallery.appendChild(imgArray[i]);
+                }
+            };
+            var imgArray = new Array();
+            imgArray[0] = new Image();
+            imgArray[0].src = "images/pic1.jpg";
+
+            imgArray[1] = new Image();
+            imgArray[1].src = "images/pic2.jpg";
+
+            imgArray[2] = new Image();
+            imgArray[2].src = "images/pic3.jpg";
+
+            imgArray[3] = new Image();
+            imgArray[3].src = "images/pic4.jpg";
+
+            imgArray[4] = new Image();
+            imgArray[4].src = "images/pic5.jpg";
+
+        </script>
+
+        <script>
+            let test = document.getElementById("thumb-bar");
+            
+            test.addEventListener("mouseover", function( event ) {   
+                // highlight the mouseover target
+                event.target.style.color = "black";
+            }
+                </script>
+
+        <script>
+            function ClearFields() {
+                document.getElementById("submitbutton").value = "";
+            }
+        </script>
+
+    </div>
+
+    <img src="images/pic5.jpg" alt="photo of yellow buttlerfly">
+    <p><label>What effect do you want to apply?</label></p>
+    <input id="effect" type="text">
+    
+    <button onclick="document.getElementById('submitbutton').value = ''">Submit</button>
+
+    <footer> <!-- Semantic tag -->
+        <p>Author: SL</p>
+        <p><a href="mailto:sl@example.ca">sl@example.ca</a></p>
+    </footer>
+
+</body>
+
+</html>
